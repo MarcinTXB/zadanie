@@ -2,6 +2,7 @@
 
 namespace zarlo\twig;
 
+
 class BBcode extends \Twig_Extension
 {
 
