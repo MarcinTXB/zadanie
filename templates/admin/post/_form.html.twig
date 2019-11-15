@@ -1,0 +1,33 @@
+{{ form_start(form) }}
+    	<table id='admin_post_new'>
+		<tr>
+		    <td colspan='2' style="font-weight: bold;">
+		    	Post z tematu: {{ tematName }}
+		   	</td>    	
+        	<td colspan='3'>
+        	    {{ form_row(form.tytul) }}
+        	</td>
+       	</tr>
+		<tr>
+			<td style="width:17%;font-size:0.9em;">Odległość tytułu</td>
+			<td>{{ form_row(form.odgt) }}</td>
+			<td>{{ form_row(form.odpt) }}</td>
+			<td>{{ form_row(form.oddt) }}</td>
+			<td>{{ form_row(form.odlt) }}</td>
+		</tr>
+		<tr>
+			<td style="width:17%;font-size:0.9em;">Czcionka tytułu</td>
+			<td>{{ form_row(form.rozt) }}</td>
+			<td>{{ form_row(form.kolort) }}</td>
+			<td>{{ form_row(form.italict) }}</td>
+			<td>{{ form_row(form.boldt) }}</td>
+		</tr>
+    
+	</table>
+    
+    {{ form_widget(form) }}
+    
+    
+    
+    <button class="btn">{{ button_label|default('Zapisz') }}</button>
+{{ form_end(form) }}

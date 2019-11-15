@@ -1,0 +1,51 @@
+{{ form_start(form) }}
+	<table id='admin_akapit_new'>
+		<tr>
+			<td colspan='2' style="font-weight: bold;">
+				Nowy akapit tematu: {{ temat.name }}<br>
+        	    Postu: {{ post.tytul }}
+        	</td>
+        	
+        	<td colspan='4'>
+        	    {{ form_row(form.tytul) }}
+        	</td>
+       	</tr>
+       	<tr>		
+			<td colspan='6'>
+	            <div style="float:left;width:120%;margin:0 0 0 -20%;">{{ form_row(form.tresc) }}</div>
+	        </td>
+	        
+	    </tr>	    	
+		<tr>
+			<td style="width:17%;font-size:0.9em;">Odległość tytułu</td>
+			<td>{{ form_row(form.odgt) }}</td>
+			<td>{{ form_row(form.odpt) }}</td>
+			<td>{{ form_row(form.oddt) }}</td>
+			<td>{{ form_row(form.odlt) }}</td>
+		</tr>
+		<tr>
+			<td style="width:17%;font-size:0.9em;">Czcionka tytułu</td>
+			<td>{{ form_row(form.rozt) }}</td>
+			<td>{{ form_row(form.kolort) }}</td>
+			<td>{{ form_row(form.italict) }}</td>
+			<td>{{ form_row(form.boldt) }}</td>
+		</tr>
+		<tr>
+			<td style="width:17%;font-size:0.9em;">Odległość akapitu</td>
+			<td>{{ form_row(form.odg) }}</td>
+			<td>{{ form_row(form.odp) }}</td>
+			<td>{{ form_row(form.odd) }}</td>
+			<td>{{ form_row(form.odl) }}</td>
+		</tr>
+		<tr>
+			<td style="width:17%;font-size:0.9em;">Czcionka akapitu</td>
+			<td>{{ form_row(form.roz) }}</td>
+			<td>{{ form_row(form.kolor) }}</td>
+			<td>{{ form_row(form.italic) }}</td>
+			<td>{{ form_row(form.bold) }}</td>
+		</tr>
+    
+	</table>
+	{{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Zapisz') }}</button>
+{{ form_end(form) }}

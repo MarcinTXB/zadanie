@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TematPost index{% endblock %}
+
+{% block body %}    
+    <table class="table" id="admin_post_index">
+        <thead>
+        	<tr>
+        		<th colspan='3'>Posty z tematu {{ tematNazwa }}</th>
+        	<tr>
+            <tr>
+                <th>Id</th>
+                <th>Tytuł</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for post in posty %}
+            <tr style="line-height:0.5em;">
+                <td>{{ post.id }}</td>
+                <td>{{ post.tytul }}</td>
+                <td>
+                                        
+                    <a href="{{ path('admin_post_edit', {'id': post.id, 'nazwa': temat.name, 'post': post }) }}">Edycja posta</a>                    
+                    <a href="{{ path('admin_akapit_new', {'id': post.id, 'nazwa': temat.name, 'post': post }) }}">Nowy akapit</a>                    
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">Brak postów</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+	
+	
+	<div class="buttons">
+		<a href="{{ path('admin_index') }}">Powrót do tematów</a>
+    	<a href="{{ path('admin_post_new', {'name': tematNazwa}) }}">Nowy post</a>
+    	
+   	</div>
+{% endblock %}

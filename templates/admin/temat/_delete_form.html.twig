@@ -1,0 +1,5 @@
+<form method="post" action="{{ path('admin_delete', {'name': temat.name}) }}" onsubmit="return confirm('Czy na pewno chcesz skasować ten temat?');">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ temat.id) }}">
+    <button class="btn">Skasuj</button>
+</form>

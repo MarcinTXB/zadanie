@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TematPost{% endblock %}
+
+{% block body %}
+	<div style='background:#F00;padding:0.5% 0.7% 0.5% 0.7%;'>
+	<div style="background:#007070;padding:0 0 11% 0;border-radius:31vw 5vw 11vw 5vw;">
+	
+    <div style="color:#FA4;font:bold 2em Arial;top:7%;left:7%;position:fixed;">{{ tematNazwa }}</div>
+	<div class='powrot1'>
+		<a href="{{ path('index') }}">Powrót</a>
+	</div>
+	
+	
+    <table class="table" id="list" style="width:59%;">
+        <tbody>            
+            {% for post in posty %}
+            	<tr id="akapit_tytul_tr">
+            		
+            		<td style="padding:5% 0 1% 3%;font-size:1.7em;font-style:italic;font-weight:bold;color:#FA5;">
+            		    {{ post.tytul }}
+            		</td>
+            	</tr>
+        		{% for akapit in post.akapity %}
+        			<tr>
+        				<td style="	padding-top: {{ akapit.odgt }}%;
+        							padding-right: {{ akapit.odpt }}%;
+        							padding-bottom: {{ akapit.oddt }}%;
+        							padding-left: {{ akapit.odlt }}%;
+        							font-size: {{ akapit.rozt }}em;
+        							{% if akapit.italict %}
+        								font-style: italic;	
+        							{% endif %}
+        							{% if akapit.boldt %}
+        								font-weight: bold;
+        							{% endif %}
+        							color:#{{ akapit.kolort }};">
+        				    {{ akapit.tytul }}
+        				</td>
+        			</tr>
+        			<tr id="akapit_tresc_tr">
+        				<td style="	padding-top: {{ akapit.odg }}%;
+        							padding-right: {{ akapit.odp }}%;
+        							padding-bottom: {{ akapit.odd }}%;
+        							padding-left: {{ akapit.odl }}%;
+        							font-size: {{ akapit.roz }}em;
+        							{% if akapit.italic %}
+        								font-style: italic;	
+        							{% endif %}
+        							{% if akapit.bold %}
+        								font-weight: bold;
+        							{% endif %}
+        							
+        							color: #{{ akapit.kolor }};
+        							">
+        							
+        							
+        							{% autoescape false %}
+        							    {{ akapit.tresc|bbcode|raw }}
+        							{% endautoescape %}
+        							
+        							
+        							<!-- img src={ { asset('build/images/prosty_kontroler.png') } } / -->
+        							<!-- img src={ { asset('build/images/the_base_controller_class.png') } } / -->
+        							
+        				</td>
+        				
+        			</tr>
+        			
+        		{% endfor %}
+            	           	
+            	
+            	<tr><td></td></tr>
+            {% endfor %}
+            
+        </tbody>
+    </table>
+
+	<div class="powrot">
+    	<a href="{{ path('index') }}">Powrót</a>
+
+   
+
+        
+    </div>
+    
+    </div>
+    </div>
+{% endblock %}

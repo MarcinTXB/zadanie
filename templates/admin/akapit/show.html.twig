@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Akapit{% endblock %}
+
+{% block body %}
+    <h1>Akapit</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ akapit.id }}</td>
+            </tr>
+            <tr>
+                <th>Tresc</th>
+                <td>{{ akapit.tresc }}</td>
+            </tr>
+            <tr>
+                <th>Odstepg</th>
+                <td>{{ akapit.odstepg }}</td>
+            </tr>
+            <tr>
+                <th>Odstepp</th>
+                <td>{{ akapit.odstepp }}</td>
+            </tr>
+            <tr>
+                <th>Odstepd</th>
+                <td>{{ akapit.odstepd }}</td>
+            </tr>
+            <tr>
+                <th>Odstepl</th>
+                <td>{{ akapit.odstepl }}</td>
+            </tr>
+            <tr>
+                <th>Czcionka</th>
+                <td>{{ akapit.czcionka }}</td>
+            </tr>
+            <tr>
+                <th>Rozmiar</th>
+                <td>{{ akapit.rozmiar }}</td>
+            </tr>
+            <tr>
+                <th>Kolor</th>
+                <td>{{ akapit.kolor }}</td>
+            </tr>
+            <tr>
+                <th>Pochylenie</th>
+                <td>{{ akapit.pochylenie }}</td>
+            </tr>
+            <tr>
+                <th>Pogrubienie</th>
+                <td>{{ akapit.pogrubienie }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('akapit_index') }}">back to list</a>
+
+    <a href="{{ path('akapit_edit', {'id': akapit.id}) }}">edit</a>
+
+    {{ include('akapit/_delete_form.html.twig') }}
+{% endblock %}

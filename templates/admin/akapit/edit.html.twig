@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Akapit{% endblock %}
+
+{% block body %}
+    <h2>Edycja akapitu</h2>
+	<div class="formularz">
+        <div style="margin:2%;">{{ include('admin/akapit/_form.html.twig', {'button_label': 'Modyfikuj'}) }}</div>
+		<div style="margin:2%;">
+        	<a href="{{ path('admin_post_edit', {'id' : akapit.post.id, 'nazwa': temat.name }) }}">Powrót do listy</a>
+        </div>    
+        <div style="margin:2%;">{{ include('admin/akapit/_delete_form.html.twig') }}</div>
+    <div class="formularz">
+{% endblock %}

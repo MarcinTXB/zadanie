@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Temat index{% endblock %}
+
+{% block body %}
+    
+	<h2>Programowanie - Admin</h2>
+    <table class="table" id="admin_index">
+        <thead>
+            
+        </thead>
+        <tbody>
+        {% for temat in temats %}
+            <tr>
+            
+                <td>
+                    <a href="{{ path('admin_list', {'name': temat.name }) }} ">{{ temat.name }}</a>
+                </td>
+               	<td>                    
+                    <a href="{{ path('admin_edit', {'name': temat.name}) }}">Edycja nazwy</a>                                        
+                    <a href="{{ path('admin_post_new', {'name': temat.name}) }}">Nowy post</a>                                        
+                </td>
+                                    
+    
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Brak tematów</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="buttons">
+    	<a href="{{ path('admin_new') }}">Nowy temat</a>
+    </div>
+{% endblock %}

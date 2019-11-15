@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Temat index{% endblock %}
+
+{% block body %}
+    <div style="background:#077;padding:0 0 11% 0;">
+    <h2 style="color:#FB5;">Programowanie</h2>
+
+    <table class="table" id="index" style="width:59%;">
+        <thead>
+            
+        </thead>
+        <tbody>
+        
+        {% for temat in tematy %}
+            <tr>
+                
+                <td>
+                    <a href="{{ path('list', {'name': temat.name } ) }} ">{{ temat.name }}</a>
+                </td>                    
+                
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Brak tematów</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+	
+	</div>
+
+{% endblock %}

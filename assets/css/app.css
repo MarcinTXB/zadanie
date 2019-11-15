@@ -1,0 +1,336 @@
+body {
+    background-color: #077;
+    color: #AED;
+	font-family: Arial;
+	
+    
+    
+}
+
+
+pre {
+	line-height: 1em !important;
+	overflow: hidden !important;
+}
+
+h2 {
+	padding: 1% 10% 1% 43%;
+	
+	 
+}
+
+button:focus {
+	
+	outline: none !important;
+	text-decoration: none !important;
+}
+
+a:focus, a:visited, a:hover, a:active {	
+	outline: none !important;
+	text-decoration: none !important;
+}
+
+
+/*  ====================================== Tabela admin index =========================*/
+
+table#admin_index {
+	
+	/*background: #057C7C;*/
+	margin: 3% 10% 5% 27%;
+	
+}
+
+table#admin_index th {
+	/*	width: 7%;*/
+}
+
+table#admin_index th:nth-last-child(1) {	
+	/*width: 13%;*/	
+}
+
+table#admin_index td {	
+	/*width: 7%;*/	
+}
+
+table#admin_index td:nth-last-child(1) {	
+	/*width: 13%;
+	background: #00D;*/
+}
+
+
+
+/*  ======================================================  Tabela admin post index  =====================  */
+
+
+table#admin_post_index {
+	/*background: #057C7C;*/
+	margin: 0 0 5% 21%;
+	width: 70%;
+	
+}
+
+table#admin_post_index th {
+	width: 7%;
+}
+
+table#admin_post_index th:first-child {	
+	width: 1%;	
+}
+
+table#admin_post_index th:nth-child(3) {	
+	width: 11%;	
+}
+
+table#admin_post_index th:nth-last-child(1) {	
+	width: 13%;	
+}
+
+table#admin_post_index td {	
+	width: 7%;	
+}
+
+table#admin_post_index td:first-child {	
+	width: 1%;	
+}
+
+table#admin_post_index td:nth-child(3) {	
+	width: 11%;
+}
+
+table#admin_post_index td:nth-last-child(1) {	
+	width: 13%;
+
+}
+
+
+/*  ====================================== Tabela admin post edit ==========================*/
+
+
+
+table#admin_post_edit {
+	padding: 0 43% 0 43%;
+	width:100%;
+}
+
+
+
+table#admin_post_edit tbody th {
+	padding: 0 0 0 23%;
+	
+}
+
+
+
+table#admin_post_edit tbody td {
+	padding: 0 0 0 23%;
+	white-space: nowrap;
+	
+}
+
+
+table#admin_post_edit tr td:nth-child(2) {
+	width: 17%;
+	
+}
+
+
+
+/*  ====================================== Tabela admin akapit new =========================*/
+
+
+
+input.admin_akapit_new {
+	width: 29%;
+}
+
+/*
+#admin_akapit_new {
+	background: #057C7C;
+	margin: 5% 10% 5% 47%;
+	border-width: thick;
+	border-color: black;
+}
+
+table#admin_akapit_new th {
+	width: 7%;
+}
+
+table#admin_akapit_new th:nth-last-child(1) {	
+	width: 13%;	
+}
+
+table#admin_akapit_new td {	
+	width: 7%;	
+}
+
+
+
+table#admin_akapit_new td:nth-last-child(1) {	
+	width: 13%;
+	background: #00D;
+}
+*/  
+
+
+
+
+
+
+	
+
+
+
+table#admin_akapit_new td p.italic_bold {	
+	padding: 0;	
+	margin: 0;
+}
+
+ 
+
+
+  
+  
+  
+  
+/*  ==========================================================    index   ======================*/
+
+table#index {
+	margin: 3% 10% 5% 27%;
+	
+}
+
+table#index tbody tr {
+	line-height: 0.9em;
+}
+
+table#index tbody tr td a {
+	color: #9CC;
+	padding-right: 28%;
+	font-weight: bold;
+}
+
+table#index tbody tr td a:hover {
+	color: #EFF;
+	font-weight: bold;
+}
+
+
+/*  ==========================================================    list    ======================*/
+
+table#list {
+	margin: 0 0 0 27%;
+	
+}
+
+
+table#list td {
+	border-top: 0px;
+	
+	/*padding: 2% 0 0 0;*/	
+}
+
+table#list tr#akapit_tresc_tr {
+	/*	line-height: 1em;	*/
+}
+
+
+table#list tr#akapit_tytul_tr td { 
+ 	color:#707;
+ 	font-weight:bold;
+ 	padding: 0 0 2% 5%;
+}
+
+table#list tr#akapit_tresc_tr td {
+	color: #577;
+	padding: 0 0 3% 0;
+}
+ 
+
+
+
+
+.buttons {
+	margin: 2% 10% 5% 40%;
+		
+}
+
+
+
+
+.powrot1 {
+	
+	left: 10%;
+	position: fixed;
+		
+	padding: 5% 70% 10% 70%;
+}
+
+.powrot1 a {	
+	margin: 1% 10% 0 0;
+	font-weight: bold;
+	font-size:1.7em;
+	font-style:italic;
+	padding: 5% 70% 10% 70%;
+	color: #288;
+	opacity: 0.3;
+
+}
+
+.powrot1 a:hover {
+	
+	padding: 10% 70% 10% 70%;
+	color: #9DD;
+	background: #555;
+	border-radius: 13px;		
+}
+
+
+.powrot {
+	margin: 2% 10% 5% 40%;
+		
+}
+
+.powrot a {
+	float: left;
+	margin: 1% 10% 0 0;
+	font-weight: bold;
+	font-size:1.7em;
+	font-style:italic;
+	padding: 5% 10% 5% 10%;
+	color: #288;		
+}
+
+.powrot a:hover {
+	float: left;
+	margin: 1% 10% 0 0;
+	font-weight: bold;
+	font-size:1.7em;
+	font-style:italic;
+	padding: 5% 10% 5% 10%;
+	color: #9DD;		
+}
+
+
+a {
+	text-decoration: none;
+	color: #AFE;				/*  #355; */
+	font-style: bold;
+	font-size: 1em;
+	padding: 0 5% 0 0;
+}
+
+a:hover {
+	color: #000;
+	font-style: bold;
+}
+
+.formularz {
+	margin: 0 10% 0 17%;
+	
+}
+
+.formularz_edycja {
+	margin: 5% 0 0 27%;
+}
+
+

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edycja posta{% endblock %}
+
+{% block body %}
+    <!-- h2>Edycja posta</h2 -->
+	<div class="formularz">
+        <div style="margin:2%;">
+            {{ include('admin/post/_form.html.twig', {'button_label': 'Modyfikuj'}) }}
+        </div>
+        
+            <table id="admin_post_edit">
+                <tbody>            
+                	<tr>
+                		<th style='padding: 0 0 1% 27%;'>
+                			Akapity posta
+                		</th>
+                	</tr>
+                    {% for akapit in akapity %}
+                    <tr>                    
+                        <td style="width:50%;">
+                        	<a href="{{ path('admin_akapit_edit', {'id' : akapit.id, 'nazwa': temat.name, 'post': akapit.post.id }) }}">
+                        	    {{ akapit.tytul }}
+                        	</a>
+                       	</td>                    
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        
+        <div style="margin:5.7% 2% 3% 2%;float:left;">
+        	<a href="{{ path('admin_list', {'name' : post.temat }) }}" style="white-space:nowrap;"><button class="btn">Powrót do postów</button></a>
+       	</div>    
+        <div style="margin:5% 2% 3% 2%;">
+            {{ include('admin/post/_delete_form.html.twig') }}
+        </div>
+    </div>
+{% endblock %}

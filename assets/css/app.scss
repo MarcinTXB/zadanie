@@ -1,0 +1,214 @@
+body {
+    background-color: #077;
+    color: #AED;
+    font-family: Arial;
+    
+    
+}
+
+h1 {
+	padding: 2% 10% 1% 35%;
+	 
+}
+
+
+
+
+
+/*  ====================================== Tabela admin index =========================*/
+
+table#admin_index {
+	
+	/*background: #057C7C;*/
+	margin: 3% 10% 5% 27%;
+	
+}
+
+table#admin_index th {
+	/*	width: 7%;*/
+}
+
+table#admin_index th:nth-last-child(1) {	
+	/*width: 13%;*/	
+}
+
+table#admin_index td {	
+	/*width: 7%;*/	
+}
+
+table#admin_index td:nth-last-child(1) {	
+	/*width: 13%;
+	background: #00D;*/
+}
+
+
+
+/*  ======================================================  Tabela admin post index  =====================  */
+
+
+table#admin_post_index {
+	/*background: #057C7C;*/
+	margin: 0 10% 5% 17%;
+	
+}
+/*
+table#admin_post_index th {
+	width: 7%;
+}
+
+table#admin_post_index th:first-child {	
+	width: 1%;	
+}
+
+table#admin_post_index th:nth-child(3) {	
+	width: 13%;	
+}
+
+table#admin_post_index th:nth-last-child(1) {	
+	width: 17%;	
+}
+
+table#admin_post_index td {	
+	width: 7%;	
+}
+
+table#admin_post_index td:first-child {	
+	width: 1%;	
+}
+
+table#admin_post_index td:nth-child(3) {	
+	width: 13%;
+}
+
+table#admin_post_index td:nth-last-child(1) {	
+	width: 17%;
+	background: #000;
+}
+*/
+
+/*  ====================================== Tabela admin post edit ==========================*/
+
+table#admin_post_edit tr td:nth-child(2) {
+	width: 17%;
+	padding: 0 0 0 2%;
+}
+
+
+
+/*  ====================================== Tabela admin akapit new =========================*/
+
+
+
+input.admin_akapit_new {
+	width: 29%;
+}
+
+#admin_akapit_new {
+	background: #057C7C;
+	margin: 5% 10% 5% 47%;
+	border-width: thick;
+	border-color: black;
+}
+
+table#admin_akapit_new th {
+	width: 7%;
+}
+
+table#admin_akapit_new th:nth-last-child(1) {	
+	width: 13%;	
+}
+
+table#admin_akapit_new td {	
+	width: 7%;	
+}
+
+table#admin_akapit_new td:nth-last-child(1) {	
+	width: 13%;
+	background: #00D;
+}
+  
+  
+  
+  
+
+
+  
+  
+  
+  
+/*  ==========================================================    index   ======================*/
+
+table#index {
+	margin: 3% 10% 5% 27%;
+}
+
+
+/*  ==========================================================    list    ======================*/
+
+table#list {
+	margin: 0 0 0 27%;
+	
+}
+
+
+table#list td {
+	border-top: 0px;
+	
+	/*padding: 2% 0 0 0;*/	
+}
+
+
+
+table#list tr#akapit_tytul_tr td { 
+ 	color:#707;
+ 	font-weight:bold;
+ 	padding: 0 0 2% 5%;
+}
+
+table#list tr#akapit_tresc_tr td {
+	color: #577;
+	padding: 0 0 3% 0;
+}
+ 
+
+
+
+
+
+
+
+
+.buttons {
+	margin: 2% 10% 5% 40%;
+		
+}
+
+.buttons a {
+	float: left;
+	margin: 1% 10% 0 0;	
+}
+
+
+
+a {
+	text-decoration: none;
+	color: #AFE;				/*  #355; */
+	font-style: bold;
+	font-size: 1em;
+	padding: 0 5% 0 0;
+}
+
+a:hover {
+	color: #000;
+	font-style: bold;
+}
+
+.formularz {
+	margin: 0 0 0 17%;
+}
+
+.formularz_edycja {
+	margin: 5% 0 0 27%;
+}
+
+

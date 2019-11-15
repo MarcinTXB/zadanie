@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Temat{% endblock %}
+
+{% block body %}
+    <h2>Edycja tematu</h2>
+    <div class="container">
+    	{{ form_start(form) }}        
+            {{ form_widget(form) }}
+            
+    		<div class="formularz_edycja row">
+    		
+                <div class="col-4-xs">
+                	<button class="btn">{{ 'Modyfikuj' }}</button>
+                    
+                </div>
+        	    {{ form_end(form) }}
+        		<div class="col-4-xs"><a href="{{ path('admin_index') }}">Powrót do listy</a></div>
+    
+            	<div class="col-4-xs">{{ include('admin/temat/_delete_form.html.twig') }}</div>
+            
+        	</div>
+    </div>
+    
+{% endblock %}

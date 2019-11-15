@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Akapit index{% endblock %}
+
+{% block body %}
+    <h1>Akapit index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Tresc</th>
+                <th>Odstepg</th>
+                <th>Odstepp</th>
+                <th>Odstepd</th>
+                <th>Odstepl</th>
+                <th>Czcionka</th>
+                <th>Rozmiar</th>
+                <th>Kolor</th>
+                <th>Pochylenie</th>
+                <th>Pogrubienie</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for akapit in akapits %}
+            <tr>
+                <td>{{ akapit.id }}</td>
+                <td>{{ akapit.tresc }}</td>
+                <td>{{ akapit.odstepg }}</td>
+                <td>{{ akapit.odstepp }}</td>
+                <td>{{ akapit.odstepd }}</td>
+                <td>{{ akapit.odstepl }}</td>
+                <td>{{ akapit.czcionka }}</td>
+                <td>{{ akapit.rozmiar }}</td>
+                <td>{{ akapit.kolor }}</td>
+                <td>{{ akapit.pochylenie }}</td>
+                <td>{{ akapit.pogrubienie }}</td>
+                <td>
+                    <a href="{{ path('akapit_show', {'id': akapit.id}) }}">show</a>
+                    <a href="{{ path('akapit_edit', {'id': akapit.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="12">Brak akapitów</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('akapit_new') }}">Create new</a>
+{% endblock %}

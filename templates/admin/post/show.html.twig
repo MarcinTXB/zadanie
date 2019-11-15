@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AkapityPosta{% endblock %}
+
+{% block body %}
+    <h1>Akapity posta</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>                  
+                <th>Tresc</th>  
+            </tr>
+            {% for akapit in akapity %}
+            	<td>{{ akapit.id }}</td>            	            	
+            	<td>{{ akapit.tresc }}</td>            	
+            {% endfor %}
+        </tbody>
+    </table>
+
+	<div class="buttons">
+    	<a href="{{ path('admin_post_index') }}">Powrót do listy postów</a>   
+
+        {{ include('admin/post/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New TematPost{% endblock %}
+
+{% block body %}
+    <h2>Nowy post tematu {{ tematName }}</h2>
+	<div class="formularz">
+        {{ include('admin/post/_form.html.twig') }}
+    	<div class="buttons">
+    		<a href="{{ path('admin_index') }}">Powrót do tematów</a>
+    	</div>
+    	
+        
+    </div>
+{% endblock %}
